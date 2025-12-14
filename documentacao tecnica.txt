@@ -1,0 +1,20 @@
+Power BI Data Model
+
+database:AdventureWorksDW2022:
+
+Tables:
+FactInternetSales (Fact table)
+DimCustomer
+DimSalesTerritory
+DimProduct
+DimProductCategory
+DimDate
+
+Relationships:
+
+FactInternetSales[CustomerKey] → DimCustomer[CustomerKey]
+FactInternetSales[ProductKey] → DimProduct[ProductKey]
+DimProduct[ProductCategoryKey] → DimProductCategory[ProductCategoryKey]
+FactInternetSales[OrderDateKey] → DimDate[DateKey]
+DimCustomer[SalesTerritoryKey] → DimSalesTerritory[SalesTerritoryKey]
+
